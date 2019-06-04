@@ -19,6 +19,9 @@ func twoSum1(nums []int, target int) []int {
 	return ret
 }
 
+/*
+  O(n)
+ */
 func twoSum2(nums []int, target int) []int {
 	ret := make([]int,0)
 	mp := make(map[int]int)
