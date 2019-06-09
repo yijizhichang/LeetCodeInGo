@@ -23,7 +23,7 @@ package problem
         5
          \
           6
- */
+*/
 
 func flatten(root *TreeNode) {
 	if root == nil {

@@ -8,11 +8,11 @@ package problem
 给定 nums = [2, 7, 11, 15], target = 9
 因为 nums[0] + nums[1] = 2 + 7 = 9
 所以返回 [0, 1]
- */
+*/
 
 /*
 	O(n2)
- */
+*/
 func twoSum1(nums []int, target int) []int {
 	ret := make([]int, 0)
 	if len(nums) < 2 {
@@ -31,7 +31,7 @@ func twoSum1(nums []int, target int) []int {
 
 /*
   O(n)
- */
+*/
 func twoSum2(nums []int, target int) []int {
 	ret := make([]int, 0)
 	mp := make(map[int]int)

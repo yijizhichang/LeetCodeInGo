@@ -24,7 +24,7 @@ package problem
 
 输入: -1->5->3->4->0
 输出: -1->0->3->4->5
- */
+*/
 
 func insertionSortList(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {

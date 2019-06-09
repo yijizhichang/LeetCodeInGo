@@ -29,10 +29,9 @@ S 只包含小写字母并且长度在[1, 500]区间内。*/
 3.每次从字符数排名前两位的字符中取字符，字符数相等时，避免，ab,ba,ab 情况出现
 4.依次取出两个，直到取完为止*/
 
-
 type CharNum struct {
-	char  string
-	num int
+	char string
+	num  int
 }
 
 type CharNums []CharNum
@@ -52,12 +51,12 @@ func (s CharNums) Swap(i, j int) {
 	s[i], s[j] = s[j], s[i]
 }
 
-func getMaxNumChar(m map[string]int)(maxFirstChar,maxSecondChar string){
+func getMaxNumChar(m map[string]int) (maxFirstChar, maxSecondChar string) {
 	//重新生成二维数据结构
 	var newStructs CharNums
-	for k,v := range m {
-		if v>0{
-			newStructs = append(newStructs,CharNum{k,v})
+	for k, v := range m {
+		if v > 0 {
+			newStructs = append(newStructs, CharNum{k, v})
 		}
 	}
 	//倒序
@@ -65,12 +64,12 @@ func getMaxNumChar(m map[string]int)(maxFirstChar,maxSecondChar string){
 
 	fmt.Println(newStructs)
 
-	var v1,v2 int
+	var v1, v2 int
 	for k, v := range newStructs {
 		if k == 0 {
 			v1 = v.num
 			maxFirstChar = v.char
-		} else if k == 1{
+		} else if k == 1 {
 			v2 = v.num
 			maxSecondChar = v.char
 		} else {
@@ -80,8 +79,8 @@ func getMaxNumChar(m map[string]int)(maxFirstChar,maxSecondChar string){
 
 	//num 相当时，保持输出字符顺序不变
 	if v1 == v2 {
-		if maxSecondChar > maxFirstChar{
-			maxFirstChar,maxSecondChar = maxSecondChar,maxFirstChar
+		if maxSecondChar > maxFirstChar {
+			maxFirstChar, maxSecondChar = maxSecondChar, maxFirstChar
 		}
 	}
 
@@ -90,21 +89,21 @@ func getMaxNumChar(m map[string]int)(maxFirstChar,maxSecondChar string){
 
 func reorganizeString(S string) string {
 
-	m := make(map[string]int,26)
+	m := make(map[string]int, 26)
 
-	for i:=0; i<len(S); i++{
+	for i := 0; i < len(S); i++ {
 		m[string(S[i])] ++
 	}
 
-	maxChar,_ := getMaxNumChar(m)
+	maxChar, _ := getMaxNumChar(m)
 
-	if m[maxChar] > (len(S)+1)/2{
+	if m[maxChar] > (len(S)+1)/2 {
 		return ""
 	}
 
 	var newStr string
-	for j:=0; j<len(S)/2+1; j++{
-		maxFirstChar,maxSecondChar := getMaxNumChar(m)
+	for j := 0; j < len(S)/2+1; j++ {
+		maxFirstChar, maxSecondChar := getMaxNumChar(m)
 		newStr += maxFirstChar
 		newStr += maxSecondChar
 		m[maxFirstChar] --
@@ -113,5 +112,3 @@ func reorganizeString(S string) string {
 
 	return newStr
 }
-
-

@@ -21,7 +21,7 @@ package problem
 输出：null
 输入解释：从各自的表头开始算起，链表 A 为 [2,6,4]，链表 B 为 [1,5]。由于这两个链表不相交，所以 intersectVal 必须为 0，而 skipA 和 skipB 可以是任意值。
 解释：这两个链表不相交，因此返回 null。
- */
+*/
 
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	if headA == nil {

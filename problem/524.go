@@ -56,16 +56,16 @@ func findLongestWord(s string, d []string) string {
 		return ""
 	}
 	var res string
-	for _,v := range d {
-	    // 如果字典字符串比s还要长,那么肯定匹配不上
+	for _, v := range d {
+		// 如果字典字符串比s还要长,那么肯定匹配不上
 		if len(v) > len(s) {
 			continue
 		}
 		i := 0
 		j := 0
-		for i<len(v) && j < len(s) {
+		for i < len(v) && j < len(s) {
 			if v[i] == s[j] {
-			    // 当匹配到一个字符后,如果后面的长度比被匹配的还要长,那么肯定匹配不上
+				// 当匹配到一个字符后,如果后面的长度比被匹配的还要长,那么肯定匹配不上
 				if len(v[i:]) > len(s[j:]) {
 					break
 				}
@@ -75,12 +75,12 @@ func findLongestWord(s string, d []string) string {
 		}
 		// 如果i 等于v的长度,说明 v已经完全匹配了,那么说明它肯定是s的子集
 		if i == len(v) {
-		    // 比较之前最符合的子集长度与此次的相比
+			// 比较之前最符合的子集长度与此次的相比
 			if len(v) == len(res) {
-			    // 直接按照 大小比字典顺序
-				 if v < res {
-                    res = v
-                 }
+				// 直接按照 大小比字典顺序
+				if v < res {
+					res = v
+				}
 			} else if len(v) > len(res) {
 				res = v
 			}

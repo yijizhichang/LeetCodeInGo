@@ -20,18 +20,17 @@ package problem
      请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
 */
 
-
 func lengthOfLongestSubstring(s string) int {
 	n := len(s)
 	if n < 2 {
 		return n
 	}
 	max := 0
-	for i:=0;i<n;i++ {
+	for i := 0; i < n; i++ {
 		mp := make(map[uint8]int)
 		mp[s[i]] = 1
-		for j:=i+1;j<n;j++ {
-			if _,ok := mp[s[j]];!ok {
+		for j := i + 1; j < n; j++ {
+			if _, ok := mp[s[j]]; !ok {
 				mp[s[j]] = 1
 			} else {
 				break
