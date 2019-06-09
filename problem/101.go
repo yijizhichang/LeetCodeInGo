@@ -17,7 +17,7 @@ package problem
   2   2
    \   \
    3    3
- */
+*/
 
 type TreeNode struct {
 	Val   int

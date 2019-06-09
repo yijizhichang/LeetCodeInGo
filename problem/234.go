@@ -11,7 +11,7 @@ package problem
 
 输入: 1->2->2->1
 输出: true
- */
+*/
 
 func isPalindrome(head *ListNode) bool {
 	if head == nil {

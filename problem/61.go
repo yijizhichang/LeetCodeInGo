@@ -19,7 +19,7 @@ package problem
 向右旋转 2 步: 1->2->0->NULL
 向右旋转 3 步: 0->1->2->NULL
 向右旋转 4 步: 2->0->1->NULL
- */
+*/
 
 func rotateRight(head *ListNode, k int) *ListNode {
 	if head == nil {

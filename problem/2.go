@@ -14,11 +14,11 @@ package problem
 */
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	ret := &ListNode{0,nil}
+	ret := &ListNode{0, nil}
 	tmp := ret
-	jw,sum := 0,0
+	jw, sum := 0, 0
 	for (l1 != nil && l2 != nil) || jw != 0 {
-		val1,val2 := 0,0
+		val1, val2 := 0, 0
 		if l1 != nil {
 			val1 = l1.Val
 			l1 = l1.Next
@@ -28,8 +28,8 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			l2 = l2.Next
 		}
 		sum = val1 + val2 + jw
-		jw = sum/10
-		tmp.Next = &ListNode{sum%10,nil}
+		jw = sum / 10
+		tmp.Next = &ListNode{sum % 10, nil}
 		tmp = tmp.Next
 	}
 	if l1 != nil {

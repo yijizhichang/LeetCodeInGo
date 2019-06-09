@@ -24,12 +24,12 @@ package problem
 输入：head = [1], pos = -1
 输出：false
 解释：链表中没有环。
- */
+*/
 
 func hasCycle(head *ListNode) bool {
 	k := head
 	m := head
-	for k!=nil && m != nil {
+	for k != nil && m != nil {
 		k = k.Next
 		if k == nil {
 			return false

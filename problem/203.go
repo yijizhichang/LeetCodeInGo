@@ -7,7 +7,7 @@ package problem
 
 输入: 1->2->6->3->4->5->6, val = 6
 输出: 1->2->3->4->5
- */
+*/
 
 func removeElements(head *ListNode, val int) *ListNode {
 	if head == nil {

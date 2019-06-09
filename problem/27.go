@@ -23,7 +23,7 @@ package problem
 注意这五个元素可为任意顺序。
 
 你不需要考虑数组中超出新长度后面的元素。
- */
+*/
 
 func removeElement(nums []int, val int) int {
 	if len(nums) == 0 {

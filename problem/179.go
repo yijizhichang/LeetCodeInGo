@@ -12,7 +12,7 @@ package problem
 输入: [3,30,34,5,9]
 输出: 9534330
 说明: 输出结果可能非常大，所以你需要返回一个字符串而不是整数。
- */
+*/
 
 func largestNumber(nums []int) string {
 
@@ -39,7 +39,7 @@ func largestNumber(nums []int) string {
 			s1Int, _ := strconv.Atoi(s1)
 			s2Int, _ := strconv.Atoi(s2)
 
-			if (s1Int < s2Int) {
+			if s1Int < s2Int {
 				nums[j], nums[j+1] = nums[j+1], nums[j]
 			}
 		}

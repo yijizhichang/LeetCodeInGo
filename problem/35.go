@@ -21,7 +21,7 @@ package problem
 
 输入: [1,3,5,6], 0
 输出: 0
- */
+*/
 
 func searchInsert(nums []int, target int) int {
 	if len(nums) == 0 {
