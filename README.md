@@ -5,6 +5,7 @@ Practice Makes Perfect
 |---| ----- | -------- |  
 |[1](https://leetcode-cn.com/problems/two-sum/)|[两数之和](./problem/1.go)|Easy| 
 |[2](https://leetcode-cn.com/problems/add-two-numbers/)|[两数相加](./problem/2.go)|Medium| 
+|[3](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)|[无重复字符的最长子串](./problem/3.go)|Medium| 
 |[4](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)|[寻找两个有序数组的中位数](./problem/4.go)|Hard|  
 |[19](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)|[删除链表的倒数第N个节点](./problem/19.go)|Medium|  
 |[26](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)|[删除排序数组中的重复项](./problem/26.go)|Easy|  
