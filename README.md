@@ -7,6 +7,7 @@ Practice Makes Perfect
 |[2](https://leetcode-cn.com/problems/add-two-numbers/)|[两数相加](./problem/2.go)|Medium| 
 |[3](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)|[无重复字符的最长子串](./problem/3.go)|Medium| 
 |[4](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)|[寻找两个有序数组的中位数](./problem/4.go)|Hard|  
+|[5](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[最长回文子串](./problem/5.go)|Medium|  
 |[19](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)|[删除链表的倒数第N个节点](./problem/19.go)|Medium|  
 |[26](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)|[删除排序数组中的重复项](./problem/26.go)|Easy|  
 |[27](https://leetcode.com/problems/remove-element/)|[移除元素](./problem/27.go)|Easy|  
