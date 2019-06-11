@@ -1,12 +1,37 @@
 package problem
 
-func flatten(root *TreeNode)  {
+/*
+给定一个二叉树，原地将它展开为链表。
+
+例如，给定二叉树
+
+    1
+   / \
+  2   5
+ / \   \
+3   4   6
+将其展开为：
+
+1
+ \
+  2
+   \
+    3
+     \
+      4
+       \
+        5
+         \
+          6
+*/
+
+func flatten(root *TreeNode) {
 	if root == nil {
 		return
 	}
 	cur := root
 	cur1 := cur
-	for cur1!=nil {
+	for cur1 != nil {
 		cur = cur1
 		if cur.Left != nil {
 			cur = cur.Left
