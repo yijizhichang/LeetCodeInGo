@@ -11,6 +11,7 @@ Practice Makes Perfect
 |[5](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[最长回文子串](./problem/5.go)|Medium|  
 |[7](https://leetcode-cn.com/problems/reverse-integer/)|[整数反转](./problem/7.go)|Easy|  
 |[19](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)|[删除链表的倒数第N个节点](./problem/19.go)|Medium|  
+|[23](https://leetcode-cn.com/problems/merge-k-sorted-lists/)|[合并K个排序链表](./problem/23.go)|Hard|  
 |[26](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)|[删除排序数组中的重复项](./problem/26.go)|Easy|  
 |[27](https://leetcode.com/problems/remove-element/)|[移除元素](./problem/27.go)|Easy|  
 |[35](https://leetcode.com/problems/search-insert-position/)|[搜索插入位置](./problem/35.go)|Easy|  
