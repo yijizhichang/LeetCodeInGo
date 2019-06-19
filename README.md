@@ -20,7 +20,8 @@ Practice Makes Perfect
 |[53](https://leetcode-cn.com/problems/multiply-strings/)|[最大子序和](./problem/53.go)|Easy|  
 |[56](https://leetcode-cn.com/problems/merge-intervals/)|[合并区间](./problem/56.go)|Medium|  
 |[61](https://leetcode-cn.com/problems/rotate-list/)|[旋转链表](./problem/61.go)|Medium|  
-|[98](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[验证二叉搜索树](./problem/98.go)|Medium|  
+|[93](https://leetcode-cn.com/problems/restore-ip-addresses)|[复原IP地址](./problem/93.go)|Medium|  
+|[98](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[验证二叉搜索树](./problem/98.go)|Medium|
 |[101](https://leetcode-cn.com/problems/symmetric-tree/)|[对称二叉树](./problem/101.go)|Easy|  
 |[114](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)|[二叉树展开为链表](./problem/114.go)|Medium|  
 |[147](https://leetcode-cn.com/problems/insertion-sort-list/)|[对链表进行插入排序](./problem/147.go)|Medium|  
