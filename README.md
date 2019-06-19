@@ -35,6 +35,7 @@ Practice Makes Perfect
 |[295](https://leetcode-cn.com/problems/find-median-from-data-stream/)|[数据流的中位数](./problem/295.go)|Hard|
 |[347](https://leetcode-cn.com/problems/top-k-frequent-elements/)|[前k个高频元素](./problem/347.go)|Medium|
 |[355](https://leetcode-cn.com/problems/design-twitter/)|[设计推特](./problem/355.go)|Medium|
+|[424](https://leetcode-cn.com/problems/longest-repeating-character-replacement/)|[替换后的最长重复字符](./problem/424.go)|Medium|
 |[524](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)|[通过删除字母匹配到字典里最长单词](./problem/524.go)|Medium|
 |[767](https://leetcode-cn.com/problems/reorganize-string/)|[重构字符串](./problem/767.go)|Medium|
 |[843](https://leetcode-cn.com/problems/guess-the-word//)|[猜猜这个单词](./problem/843.go)|Hard|
