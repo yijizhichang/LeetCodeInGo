@@ -118,11 +118,9 @@ func kSmallestPairs(nums1 []int, nums2 []int, k int) [][]int {
 			a[v+val] = append(a[v+val], []int{v, val})
 		}
 	}
-	fmt.Println(a)
 	sort.Ints(ar)
 
 	ar = ar[0:k]
-	fmt.Println(ar)
 	for _, v := range ar {
 
 		val := a[v][0]
