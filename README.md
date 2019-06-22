@@ -1,7 +1,6 @@
 # LeetCodeInGo
 Practice Makes Perfect
-刷题练心
-
+I leave no trace of wings in the air, but I am glad I have had my flight.
 |序号|题目名称|难度| 
 |---| ----- | -------- |  
 |[1](https://leetcode-cn.com/problems/two-sum/)|[两数之和](./problem/1.go)|Easy| 
