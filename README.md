@@ -1,11 +1,11 @@
 # LeetCodeInGo
 Practice Makes Perfect
 I leave no trace of wings in the air, but I am glad I have had my flight.  
-|序号|题目名称|难度| 
+|序号|题目名称|难度|  
 |---| ----- | -------- |  
-|[1](https://leetcode-cn.com/problems/two-sum/)|[两数之和](./problem/1.go)|Easy| 
-|[2](https://leetcode-cn.com/problems/add-two-numbers/)|[两数相加](./problem/2.go)|Medium| 
-|[3](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)|[无重复字符的最长子串](./problem/3.go)|Medium| 
+|[1](https://leetcode-cn.com/problems/two-sum/)|[两数之和](./problem/1.go)|Easy|  
+|[2](https://leetcode-cn.com/problems/add-two-numbers/)|[两数相加](./problem/2.go)|Medium|  
+|[3](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)|[无重复字符的最长子串](./problem/3.go)|Medium|  
 |[4](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)|[寻找两个有序数组的中位数](./problem/4.go)|Hard|  
 |[5](https://leetcode-cn.com/problems/longest-palindromic-substring/)|[最长回文子串](./problem/5.go)|Medium|  
 |[7](https://leetcode-cn.com/problems/reverse-integer/)|[整数反转](./problem/7.go)|Easy|  
@@ -28,17 +28,17 @@ I leave no trace of wings in the air, but I am glad I have had my flight.
 |[179](https://leetcode-cn.com/problems/largest-number/)|[最大数](/problem/179.go)|Medium|  
 |[203](https://leetcode-cn.com/problems/remove-linked-list-elements/)|[移除链表元素](./problem/203.go)|Easy|  
 |[226](https://leetcode-cn.com/problems/invert-binary-tree/)|[翻转二叉树](./problem/226.go)|Easy|  
-|[234](https://leetcode-cn.com/problems/palindrome-linked-list/)|[回文链表](./problem/234.go)|Easy|
-|[236](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)|[二叉树的最近公共祖先](./problem/236.go)|Medium|
-|[239](https://leetcode-cn.com/problems/sliding-window-maximum/)|[滑动窗口最大值](./problem/239.go)|Hard|
-|[295](https://leetcode-cn.com/problems/find-median-from-data-stream/)|[数据流的中位数](./problem/295.go)|Hard|
-|[322](https://leetcode-cn.com/problems/coin-change/)|[零钱兑换](./problem/322.go)|Medium|
-|[347](https://leetcode-cn.com/problems/top-k-frequent-elements/)|[前k个高频元素](./problem/347.go)|Medium|
-|[355](https://leetcode-cn.com/problems/design-twitter/)|[设计推特](./problem/355.go)|Medium|
-|[373](https://leetcode-cn.com/problems/find-k-pairs-with-smallest-sums/)|[查找和最小的K对数字](./problem/373.go)|Medium|
-|[424](https://leetcode-cn.com/problems/longest-repeating-character-replacement/)|[替换后的最长重复字符](./problem/424.go)|Medium|
-|[524](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)|[通过删除字母匹配到字典里最长单词](./problem/524.go)|Medium|
-|[767](https://leetcode-cn.com/problems/reorganize-string/)|[重构字符串](./problem/767.go)|Medium|
+|[234](https://leetcode-cn.com/problems/palindrome-linked-list/)|[回文链表](./problem/234.go)|Easy|  
+|[236](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)|[二叉树的最近公共祖先](./problem/236.go)|Medium|  
+|[239](https://leetcode-cn.com/problems/sliding-window-maximum/)|[滑动窗口最大值](./problem/239.go)|Hard|  
+|[295](https://leetcode-cn.com/problems/find-median-from-data-stream/)|[数据流的中位数](./problem/295.go)|Hard|  
+|[322](https://leetcode-cn.com/problems/coin-change/)|[零钱兑换](./problem/322.go)|Medium|  
+|[347](https://leetcode-cn.com/problems/top-k-frequent-elements/)|[前k个高频元素](./problem/347.go)|Medium|  
+|[355](https://leetcode-cn.com/problems/design-twitter/)|[设计推特](./problem/355.go)|Medium|  
+|[373](https://leetcode-cn.com/problems/find-k-pairs-with-smallest-sums/)|[查找和最小的K对数字](./problem/373.go)|Medium|  
+|[424](https://leetcode-cn.com/problems/longest-repeating-character-replacement/)|[替换后的最长重复字符](./problem/424.go)|Medium|  
+|[524](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)|[通过删除字母匹配到字典里最长单词](./problem/524.go)|Medium|  
+|[767](https://leetcode-cn.com/problems/reorganize-string/)|[重构字符串](./problem/767.go)|Medium|  
 |[843](https://leetcode-cn.com/problems/guess-the-word/)|[猜猜这个单词](./problem/843.go)|Hard|
 
 
