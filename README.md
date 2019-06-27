@@ -37,7 +37,8 @@ I leave no trace of wings in the air, but I am glad I have had my flight.
 |[236](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)|[二叉树的最近公共祖先](./problem/236.go)|Medium|  
 |[239](https://leetcode-cn.com/problems/sliding-window-maximum/)|[滑动窗口最大值](./problem/239.go)|Hard|  
 |[295](https://leetcode-cn.com/problems/find-median-from-data-stream/)|[数据流的中位数](./problem/295.go)|Hard|  
-|[322](https://leetcode-cn.com/problems/coin-change/)|[零钱兑换](./problem/322.go)|Medium|  
+|[310](https://leetcode-cn.com/problems/minimum-height-trees/)|[最小高度树](./problem/310.go)|Medium|
+|[322](https://leetcode-cn.com/problems/coin-change/)|[零钱兑换](./problem/322.go)|Medium|
 |[347](https://leetcode-cn.com/problems/top-k-frequent-elements/)|[前k个高频元素](./problem/347.go)|Medium|  
 |[355](https://leetcode-cn.com/problems/design-twitter/)|[设计推特](./problem/355.go)|Medium|  
 |[373](https://leetcode-cn.com/problems/find-k-pairs-with-smallest-sums/)|[查找和最小的K对数字](./problem/373.go)|Medium|  
