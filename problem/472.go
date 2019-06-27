@@ -1,4 +1,4 @@
-package main
+package problem
 
 type node struct {
 	child [26]*node
