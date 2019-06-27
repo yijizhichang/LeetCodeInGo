@@ -1,4 +1,4 @@
-package main
+package problem
 
 func main() {
 	arr := []int{10,5,2,6}
