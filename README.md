@@ -19,7 +19,8 @@ I leave no trace of wings in the air, but I am glad I have had my flight.
 |[48](https://leetcode-cn.com/problems/rotate-image/)|[旋转图像](./problem/48.go)|Medium|  
 |[53](https://leetcode-cn.com/problems/multiply-strings/)|[最大子序和](./problem/53.go)|Easy|  
 |[56](https://leetcode-cn.com/problems/merge-intervals/)|[合并区间](./problem/56.go)|Medium|  
-|[61](https://leetcode-cn.com/problems/rotate-list/)|[旋转链表](./problem/61.go)|Medium|  
+|[61](https://leetcode-cn.com/problems/rotate-list/)|[旋转链表](./problem/61.go)|Medium|
+|[72](https://leetcode-cn.com/problems/edit-distance/)|[编辑距离](./problem/72.go)|Hard|
 |[93](https://leetcode-cn.com/problems/restore-ip-addresses)|[复原IP地址](./problem/93.go)|Medium|
 |[97](https://leetcode-cn.com/problems/interleaving-string/comments/)|[交错字符串](./problem/97.go)|Medium|
 |[98](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[验证二叉搜索树](./problem/98.go)|Medium|
