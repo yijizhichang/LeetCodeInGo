@@ -22,6 +22,8 @@ I leave no trace of wings in the air, but I am glad I have had my flight.
 |[61](https://leetcode-cn.com/problems/rotate-list/)|[旋转链表](./problem/61.go)|Medium|
 |[63](https://leetcode-cn.com/problems/unique-paths-ii/)|[不同路径 II](./problem/63.go)|Medium|
 |[72](https://leetcode-cn.com/problems/edit-distance/)|[编辑距离](./problem/72.go)|Hard|
+|[84](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)|[柱状图中最大的矩形](./problem/84.go)|Hard|
+|[85](https://leetcode-cn.com/problems/maximal-rectangle/)|[最大矩形](./problem/85.go)|Hard|
 |[93](https://leetcode-cn.com/problems/restore-ip-addresses)|[复原IP地址](./problem/93.go)|Medium|
 |[97](https://leetcode-cn.com/problems/interleaving-string/comments/)|[交错字符串](./problem/97.go)|Medium|
 |[98](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[验证二叉搜索树](./problem/98.go)|Medium|
