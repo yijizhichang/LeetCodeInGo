@@ -13,7 +13,6 @@ I leave no trace of wings in the air, but I am glad I have had my flight.
 |[19](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)|[删除链表的倒数第N个节点](./problem/19.go)|Medium|  
 |[23](https://leetcode-cn.com/problems/merge-k-sorted-lists/)|[合并K个排序链表](./problem/23.go)|Hard|  
 |[26](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)|[删除排序数组中的重复项](./problem/26.go)|Easy|  
-<<<<<<< HEAD
 |[27](https://leetcode-cn.com/problems/remove-element/)|[移除元素](./problem/27.go)|Easy|  
 |[35](https://leetcode-cn.com/problems/search-insert-position/)|[搜索插入位置](./problem/35.go)|Easy|  
 |[43](https://leetcode-cn.com/problems/multiply-strings/)|[字符串相乘](./problem/43.go)|Medium|  
@@ -23,8 +22,10 @@ I leave no trace of wings in the air, but I am glad I have had my flight.
 |[61](https://leetcode-cn.com/problems/rotate-list/)|[旋转链表](./problem/61.go)|Medium|
 |[63](https://leetcode-cn.com/problems/unique-paths-ii/)|[不同路径 II](./problem/63.go)|Medium|
 |[72](https://leetcode-cn.com/problems/edit-distance/)|[编辑距离](./problem/72.go)|Hard|
+|[75](https://leetcode.com/problems/sort-colors/)|[颜色分类](./problem/75.go)|Medium|  
 |[84](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)|[柱状图中最大的矩形](./problem/84.go)|Hard|
 |[85](https://leetcode-cn.com/problems/maximal-rectangle/)|[最大矩形](./problem/85.go)|Hard|
+|[86](https://leetcode.com/problems/partition-list/)|[分隔链表](./problem/86.go)|Medium|  
 |[93](https://leetcode-cn.com/problems/restore-ip-addresses)|[复原IP地址](./problem/93.go)|Medium|
 |[97](https://leetcode-cn.com/problems/interleaving-string/comments/)|[交错字符串](./problem/97.go)|Medium|
 |[98](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[验证二叉搜索树](./problem/98.go)|Medium|
@@ -55,27 +56,4 @@ I leave no trace of wings in the air, but I am glad I have had my flight.
 |[713](https://leetcode-cn.com/problems/subarray-product-less-than-k/)|[乘积小于ķ的子数组](./problem/713.go)|Medium|
 |[767](https://leetcode-cn.com/problems/reorganize-string/)|[重构字符串](./problem/767.go)|Medium|  
 |[843](https://leetcode-cn.com/problems/guess-the-word/)|[猜猜这个单词](./problem/843.go)|Hard|
-=======
-|[27](https://leetcode.com/problems/remove-element/)|[移除元素](./problem/27.go)|Easy|  
-|[35](https://leetcode.com/problems/search-insert-position/)|[搜索插入位置](./problem/35.go)|Easy|  
-|[43](https://leetcode.com/problems/multiply-strings/)|[字符串相乘](./problem/43.go)|Medium|  
-|[48](https://leetcode.com/problems/rotate-image/)|[旋转图像](./problem/48.go)|Medium|  
-|[53](https://leetcode.com/problems/multiply-strings/)|[最大子序和](./problem/53.go)|Easy|  
-|[61](https://leetcode.com/problems/rotate-list/)|[旋转链表](./problem/61.go)|Medium|  
-|[75](https://leetcode.com/problems/sort-colors/)|[颜色分类](./problem/75.go)|Medium|  
-|[86](https://leetcode.com/problems/partition-list/)|[分隔链表](./problem/86.go)|Medium|  
-|[98](https://leetcode.com/problems/validate-binary-search-tree/)|[验证二叉搜索树](./problem/98.go)|Medium|  
-|[101](https://leetcode.com/problems/symmetric-tree/)|[对称二叉树](./problem/101.go)|Easy|  
-|[114](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)|[二叉树展开为链表](./problem/114.go)|Medium|  
-|[147](https://leetcode.com/problems/insertion-sort-list/)|[对链表进行插入排序](./problem/147.go)|Medium|  
-|[160](https://leetcode.com/problems/intersection-of-two-linked-lists/)|[相交链表](./problem/160.go)|Easy|  
-|[179](https://leetcode.com/problems/largest-number/)|[最大数](/problem/179.go)|Medium|  
-|[203](https://leetcode.com/problems/remove-linked-list-elements/)|[移除链表元素](./problem/203.go)|Easy|  
-|[226](https://leetcode.com/problems/invert-binary-tree/)|[翻转二叉树](./problem/226.go)|Easy|  
-|[234](https://leetcode.com/problems/palindrome-linked-list/)|[回文链表](./problem/234.go)|Easy|  
-|[236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|[二叉树的最近公共祖先](./problem/236.go)|Medium|  
-|[524](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/)|[通过删除字母匹配到字典里最长单词](./problem/524.go)|Medium|  
-|[767](https://leetcode.com/problems/reorganize-string/)|[重构字符串](./problem/767.go)|Medium|  
-
->>>>>>> 64c10a1... 75,86
 
