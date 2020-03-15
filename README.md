@@ -22,6 +22,10 @@ I leave no trace of wings in the air, but I am glad I have had my flight.
 |[61](https://leetcode-cn.com/problems/rotate-list/)|[旋转链表](./problem/61.go)|Medium|
 |[63](https://leetcode-cn.com/problems/unique-paths-ii/)|[不同路径 II](./problem/63.go)|Medium|
 |[72](https://leetcode-cn.com/problems/edit-distance/)|[编辑距离](./problem/72.go)|Hard|
+|[75](https://leetcode.com/problems/sort-colors/)|[颜色分类](./problem/75.go)|Medium|  
+|[84](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)|[柱状图中最大的矩形](./problem/84.go)|Hard|
+|[85](https://leetcode-cn.com/problems/maximal-rectangle/)|[最大矩形](./problem/85.go)|Hard|
+|[86](https://leetcode.com/problems/partition-list/)|[分隔链表](./problem/86.go)|Medium|  
 |[93](https://leetcode-cn.com/problems/restore-ip-addresses)|[复原IP地址](./problem/93.go)|Medium|
 |[97](https://leetcode-cn.com/problems/interleaving-string/comments/)|[交错字符串](./problem/97.go)|Medium|
 |[98](https://leetcode-cn.com/problems/validate-binary-search-tree/)|[验证二叉搜索树](./problem/98.go)|Medium|
@@ -45,6 +49,7 @@ I leave no trace of wings in the air, but I am glad I have had my flight.
 |[347](https://leetcode-cn.com/problems/top-k-frequent-elements/)|[前k个高频元素](./problem/347.go)|Medium|  
 |[355](https://leetcode-cn.com/problems/design-twitter/)|[设计推特](./problem/355.go)|Medium|  
 |[373](https://leetcode-cn.com/problems/find-k-pairs-with-smallest-sums/)|[查找和最小的K对数字](./problem/373.go)|Medium|  
+|[392](https://leetcode-cn.com/problems/is-subsequence/)|[判断子序列](./problem/392.go)|Medium|  
 |[424](https://leetcode-cn.com/problems/longest-repeating-character-replacement/)|[替换后的最长重复字符](./problem/424.go)|Medium|  
 |[524](https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/)|[通过删除字母匹配到字典里最长单词](./problem/524.go)|Medium|
 |[547](https://leetcode-cn.com/problems/friend-circles/)|[朋友圈](./problem/547.go)|Medium|
