@@ -2,7 +2,6 @@ package problem
 
 import (
 	"fmt"
-	"syscall"
 )
 
 /*

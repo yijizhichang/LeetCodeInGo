@@ -6,5 +6,4 @@ import (
 
 func main() {
 	fmt.Println("test here!")
-
 }

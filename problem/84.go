@@ -1,4 +1,4 @@
-package problem84
+package problem
 
 /*
 	下面为了好理解，所以将步骤  拆解 分离

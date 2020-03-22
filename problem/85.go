@@ -1,4 +1,4 @@
-package problem85
+package problem
 
 /*
 	此题 为84题的升级版
