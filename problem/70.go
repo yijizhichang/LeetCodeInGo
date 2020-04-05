@@ -69,10 +69,10 @@ func climbStairs(n int) int {
 	return dp[n]
 }
 
-//func helper(n int, dp []int) int {
+//func depth(n int, dp []int) int {
 //	if dp[n] != 0 {
 //		return dp[n]
 //	}
-//	return helper(n-1,dp) + helper(n-2,dp)
+//	return depth(n-1,dp) + depth(n-2,dp)
 //}
 
