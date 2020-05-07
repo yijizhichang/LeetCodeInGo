@@ -45,7 +45,6 @@ costs.length == 3
 
  */
 
-
 func mincostTickets(days []int, costs []int) int {
 	size := len(days)
 	dp := make([]int, days[size-1] + 1)
