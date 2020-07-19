@@ -24,18 +24,18 @@ package problem
 
 */
 func uniquePathsWithObstacles(obstacleGrid [][]int) int {
-	if (len(obstacleGrid) == 0) {
-		return 0;
+	if len(obstacleGrid) == 0 {
+		return 0
 	}
-	if (obstacleGrid[0][0] == 1) {
-		return 0;
+	if obstacleGrid[0][0] == 1 {
+		return 0
 	}
 	obstacleGrid[0][0] = 1
 	for i := 1; i < len(obstacleGrid); i++ {
 		if obstacleGrid[i][0] == 1 {
 			obstacleGrid[i][0] = 0
 		} else {
-			obstacleGrid[i][0] = obstacleGrid[i - 1][0]
+			obstacleGrid[i][0] = obstacleGrid[i-1][0]
 		}
 	}
 	for j := 1; j < len(obstacleGrid[0]); j++ {
@@ -47,9 +47,9 @@ func uniquePathsWithObstacles(obstacleGrid [][]int) int {
 	}
 	for m := 1; m < len(obstacleGrid); m++ {
 		for n := 1; n < len(obstacleGrid[0]); n++ {
-			if obstacleGrid[m][n] == 1{
+			if obstacleGrid[m][n] == 1 {
 				obstacleGrid[m][n] = 0
-			}else{
+			} else {
 				obstacleGrid[m][n] = obstacleGrid[m-1][n] + obstacleGrid[m][n-1]
 			}
 		}

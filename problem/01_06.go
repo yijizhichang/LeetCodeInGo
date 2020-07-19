@@ -21,7 +21,7 @@ import (
 
 字符串长度在[0, 50000]范围内。
 
- */
+*/
 
 func compressString(S string) string {
 	if len(S) <= 1 {
@@ -32,7 +32,7 @@ func compressString(S string) string {
 	res := ""
 	for j < len(S) {
 		if S[i] == S[j] {
-			j ++
+			j++
 		} else {
 			res += fmt.Sprintf("%s%d", string(S[i]), j-i)
 			i = j

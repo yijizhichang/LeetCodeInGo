@@ -7,7 +7,7 @@ package problem
 
 	说明：不允许修改给定的链表。
 
-	 
+
 
 	示例 1：
 
@@ -34,7 +34,7 @@ package problem
  *     Val int
  *     Next *ListNode
  * }
- */
+*/
 func detectCycle(head *ListNode) *ListNode {
 	// 判断是否有环
 	if head == nil || head.Next == nil { //没有直接返回

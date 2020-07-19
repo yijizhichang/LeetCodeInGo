@@ -25,7 +25,7 @@ package problem
 矩形中的所有坐标都处于 -10^9 和 10^9 之间。
 x 轴默认指向右，y 轴默认指向上。
 你可以仅考虑矩形是正放的情况。
- */
+*/
 
 func isRectangleOverlap(rec1 []int, rec2 []int) bool {
 	// 考虑区间重叠

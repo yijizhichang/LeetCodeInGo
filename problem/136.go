@@ -16,7 +16,7 @@ package problem
 输入: [4,1,2,1,2]
 输出: 4
 
- */
+*/
 
 func singleNumber(nums []int) int {
 	if len(nums) == 0 {

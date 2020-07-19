@@ -29,7 +29,7 @@ func removeElements(head *ListNode, val int) *ListNode {
 	if head == nil {
 		return head
 	}
-	helperH := &ListNode{Val:0, Next:head}
+	helperH := &ListNode{Val: 0, Next: head}
 	ret := helperH
 	for helperH.Next != nil {
 		if helperH.Next.Val == val {

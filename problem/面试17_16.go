@@ -5,7 +5,7 @@ package problem
 
 注意：本题相对原题稍作改动
 
- 
+
 
 示例 1：
 
@@ -23,7 +23,7 @@ package problem
 输出： 12
 解释： 选择 1 号预约、 3 号预约、 5 号预约和 8 号预约，总时长 = 2 + 4 + 3 + 3 = 12。
 
- */
+*/
 
 func massage(nums []int) int {
 	if len(nums) < 1 {
@@ -38,7 +38,7 @@ func massage(nums []int) int {
 	dp := make([]int, len(nums))
 	dp[0] = nums[0]
 	dp[1] = max(nums[0], nums[1])
-	for i:=2; i<len(nums); i++ {
+	for i := 2; i < len(nums); i++ {
 		dp[i] = max(dp[i-1], dp[i-2]+nums[i])
 	}
 	return dp[len(nums)-1]

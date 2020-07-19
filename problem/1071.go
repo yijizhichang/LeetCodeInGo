@@ -5,7 +5,7 @@ package problem
 
 返回最长字符串 X，要求满足 X 能除尽 str1 且 X 能除尽 str2。
 
- 
+
 
 示例 1：
 
@@ -19,7 +19,7 @@ package problem
 
 输入：str1 = "LEET", str2 = "CODE"
 输出：""
- 
+
 
 提示：
 
@@ -27,7 +27,7 @@ package problem
 1 <= str2.length <= 1000
 str1[i] 和 str2[i] 为大写英文字母
 
- */
+*/
 
 func gcdOfStrings(str1 string, str2 string) string {
 	if len(str1) < len(str2) {
@@ -52,4 +52,3 @@ func modOfStrings(str1, str2 string) string {
 	}
 	return remainder
 }
-

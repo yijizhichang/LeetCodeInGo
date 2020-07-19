@@ -19,12 +19,12 @@ package problem
 解释:
 我们可以构造的最长的回文串是"dccaccd", 它的长度是 7。
 
- */
+*/
 
 func longestPalindrome(s string) int {
 	letter2count := make(map[rune]int)
 	for _, letter := range s {
-		if _, ok := letter2count[letter];ok {
+		if _, ok := letter2count[letter]; ok {
 			letter2count[letter] += 1
 		} else {
 			letter2count[letter] = 1
@@ -33,10 +33,10 @@ func longestPalindrome(s string) int {
 	ret := 0
 	hasOdd := false
 	for _, count := range letter2count {
-		if count % 2 == 0 {
+		if count%2 == 0 {
 			// 可以整除说明可以成对子
 			ret += count
-		} else if count > 1{
+		} else if count > 1 {
 			// 大于1但是单数
 			ret += count / 2 * 2
 			hasOdd = true

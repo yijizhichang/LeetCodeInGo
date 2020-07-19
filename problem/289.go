@@ -11,7 +11,7 @@ package problem
 如果死细胞周围正好有三个活细胞，则该位置死细胞复活；
 根据当前状态，写一个函数来计算面板上所有细胞的下一个（一次更新后的）状态。下一个状态是通过将上述规则同时应用于当前状态下的每个细胞所形成的，其中细胞的出生和死亡是同时发生的。
 
- 
+
 
 示例：
 
@@ -29,14 +29,14 @@ package problem
   [0,1,1],
   [0,1,0]
 ]
- 
+
 
 进阶：
 
 你可以使用原地算法解决本题吗？请注意，面板上所有格子需要同时被更新：你不能先更新某些格子，然后使用它们的更新后的值再更新其他格子。
 本题中，我们使用二维数组来表示面板。原则上，面板是无限的，但当活细胞侵占了面板边界时会造成问题。你将如何解决这些问题？
 
- */
+*/
 
 /*
 题解
@@ -53,48 +53,47 @@ package problem
 那么相应的，监测细胞周围活细胞的条件为，当身边活细胞状态为>0时，可知它是活细胞
 
 这样确认完所有状态后，下一次一次性更新所有状态即可
- */
-func gameOfLife(board [][]int)  {
-	for i:=0;i<len(board);i++{
-		for j:=0;j<len(board[0]);j++{
-			temp:=countCellsAlive(board,i,j)
-			if board[i][j]==0{
-				if temp==3{
+*/
+func gameOfLife(board [][]int) {
+	for i := 0; i < len(board); i++ {
+		for j := 0; j < len(board[0]); j++ {
+			temp := countCellsAlive(board, i, j)
+			if board[i][j] == 0 {
+				if temp == 3 {
 					// 复活的记录一个状态
-					board[i][j]=-1
+					board[i][j] = -1
 				}
-			}else{
-				if temp<2||temp>3{
+			} else {
+				if temp < 2 || temp > 3 {
 					// 从活变死的记录一个状态
-					board[i][j]=2
+					board[i][j] = 2
 				}
 			}
 		}
 	}
 	// 统一更新
-	for i:=0;i<len(board);i++{
-		for j:=0;j<len(board[0]);j++{
-			if board[i][j]==2{
-				board[i][j]=0
+	for i := 0; i < len(board); i++ {
+		for j := 0; j < len(board[0]); j++ {
+			if board[i][j] == 2 {
+				board[i][j] = 0
 			}
-			if board[i][j]==-1{
-				board[i][j]=1
+			if board[i][j] == -1 {
+				board[i][j] = 1
 			}
 		}
 	}
 }
-func countCellsAlive(board [][]int,i,j int) int{
-	res:=0
-	for m:=-1; m<=1; m++ {
-		for n:=-1;n<=1;n++{
-			if 0<=(i+m)&&(i+m)<len(board)&&(j+n)>=0&&(j+n)<len(board[0])&&board[i+m][j+n]>0{
+func countCellsAlive(board [][]int, i, j int) int {
+	res := 0
+	for m := -1; m <= 1; m++ {
+		for n := -1; n <= 1; n++ {
+			if 0 <= (i+m) && (i+m) < len(board) && (j+n) >= 0 && (j+n) < len(board[0]) && board[i+m][j+n] > 0 {
 				res++
 			}
 		}
 	}
-	if board[i][j]==1{
+	if board[i][j] == 1 {
 		res--
 	}
 	return res
 }
-

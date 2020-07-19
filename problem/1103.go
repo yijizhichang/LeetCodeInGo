@@ -13,7 +13,7 @@ package problem
 
 返回一个长度为 num_people、元素之和为 candies 的数组，以表示糖果的最终分发情况（即 ans[i] 表示第 i 个小朋友分到的糖果数）。
 
- 
+
 
 示例 1：
 
@@ -34,7 +34,7 @@ package problem
 第三次，ans[2] += 3，数组变为 [1,2,3]。
 第四次，ans[0] += 4，最终数组变为 [5,2,3]。
 
- */
+*/
 func distributeCandies(candies int, num_people int) []int {
 	ret := make([]int, num_people)
 	i := 0

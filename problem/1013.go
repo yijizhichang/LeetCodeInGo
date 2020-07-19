@@ -26,36 +26,35 @@ package problem
 
 func canThreePartsEqualSum(A []int) bool {
 	sum := 0
-	for _, num:=range A {
+	for _, num := range A {
 		sum += num
 	}
 
-	if len(A)<3 || sum%3!=0 {
+	if len(A) < 3 || sum%3 != 0 {
 		return false
 	}
 
 	// 使用双指针'i','j', 尝试将数组A划分成 [0,i] (i,j) [j,len(A)-1]三部分
 	var i, j int
-	target := sum/3
+	target := sum / 3
 	temp1 := 0
 	temp2 := 0
-	for i=0; i<len(A); i++ {
+	for i = 0; i < len(A); i++ {
 		temp1 += A[i]
-		if temp1==target {
+		if temp1 == target {
 			break
 		}
 	}
 
-	for j=len(A)-1; j>=0; j-- {
+	for j = len(A) - 1; j >= 0; j-- {
 		temp2 += A[j]
-		if temp2==target {
+		if temp2 == target {
 			break
 		}
 	}
 
-	if i+1<j {
+	if i+1 < j {
 		return true
 	}
 	return false
 }
-

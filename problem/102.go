@@ -3,7 +3,7 @@ package problem
 /*
 给你一个二叉树，请你返回其按 层序遍历 得到的节点值。 （即逐层地，从左到右访问所有节点）。
 
- 
+
 
 示例：
 二叉树：[3,9,20,null,null,15,7],
@@ -21,7 +21,7 @@ package problem
   [15,7]
 ]
 
- */
+*/
 
 /**
  * Definition for a binary tree node.
@@ -41,7 +41,7 @@ func levelOrder(root *TreeNode) [][]int {
 	nodeCount := len(level)
 	for len(level) > 0 {
 		levelSlice := make([]int, 0)
-		for nodeCount > 0  {
+		for nodeCount > 0 {
 			top := level[0]
 			levelSlice = append(levelSlice, top.Val)
 			if top.Left != nil {
@@ -51,7 +51,7 @@ func levelOrder(root *TreeNode) [][]int {
 				level = append(level, top.Right)
 			}
 			level = level[1:]
-			nodeCount --
+			nodeCount--
 		}
 		ret = append(ret, levelSlice)
 		nodeCount = len(level)

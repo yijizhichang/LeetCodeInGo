@@ -21,11 +21,11 @@ package problem
 输出: true
 说明:
 你可以假设 s 和 t 具有相同的长度。
- */
+*/
 
 func isIsomorphic(s string, t string) bool {
 	s2t := make(map[string]string)
-	for index, this := range s{
+	for index, this := range s {
 		if value, ok := s2t[string(this)]; ok {
 			if value != string(t[index]) {
 				return false
@@ -35,7 +35,7 @@ func isIsomorphic(s string, t string) bool {
 		}
 	}
 	t2s := make(map[string]string)
-	for index, this := range t{
+	for index, this := range t {
 		if value, ok := t2s[string(this)]; ok {
 			if value != string(s[index]) {
 				return false
@@ -67,4 +67,4 @@ func isIsomorphic(s string, t string) bool {
 	}
 	return true
 }
- */
+*/

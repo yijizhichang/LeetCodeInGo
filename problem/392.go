@@ -10,7 +10,7 @@ package problem
 //链接：https://leetcode-cn.com/problems/is-subsequence
 //著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 func isSubsequence(s string, t string) bool {
-	if s == ""{
+	if s == "" {
 		return true
 	}
 	ls := len(s)

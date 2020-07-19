@@ -7,7 +7,7 @@ package problem
 
 请你返回最终形体的表面积。
 
- 
+
 
 示例 1：
 
@@ -29,14 +29,14 @@ package problem
 
 输入：[[2,2,2],[2,1,2],[2,2,2]]
 输出：46
- 
+
 
 提示：
 
 1 <= N <= 50
 0 <= grid[i][j] <= 50
 
- */
+*/
 
 func surfaceArea(grid [][]int) int {
 	if len(grid) < 1 || len(grid[0]) < 1 {
@@ -46,8 +46,8 @@ func surfaceArea(grid [][]int) int {
 	block := 0
 	// 被盖住的面(这里只记录了一边的，其实是结果要*2)
 	cover := 0
-	for i:=0; i < len(grid); i ++ {
-		for j:=0; j < len(grid[i]); j ++ {
+	for i := 0; i < len(grid); i++ {
+		for j := 0; j < len(grid[i]); j++ {
 			block += grid[i][j]
 			// 当前坐标重叠的面
 			if grid[i][j] > 1 {

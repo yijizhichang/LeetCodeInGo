@@ -5,7 +5,7 @@ package problem
 
 不占用额外内存空间能否做到？
 
- 
+
 
 示例 1:
 
@@ -40,15 +40,15 @@ package problem
   [16, 7,10,11]
 ]
 
- */
+*/
 // 用翻转代替旋转
-func rotate(matrix [][]int)  {
+func rotate(matrix [][]int) {
 	if len(matrix) == 0 {
 		return
 	}
 	// 纵向翻转
-	for y := 0; y < len(matrix)/2; y ++ {
-		matrix[y] , matrix[len(matrix)-1-y] = matrix[len(matrix)-1-y], matrix[y]
+	for y := 0; y < len(matrix)/2; y++ {
+		matrix[y], matrix[len(matrix)-1-y] = matrix[len(matrix)-1-y], matrix[y]
 	}
 	// 沿主对角线对折
 	// 再按主对角线进行元素翻转

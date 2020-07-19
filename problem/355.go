@@ -1,8 +1,8 @@
 package problem
 
 import (
-	"time"
 	"sort"
+	"time"
 )
 
 /*
@@ -37,7 +37,7 @@ twitter.unfollow(1, 2);
 // 用户1的获取推文应当返回一个列表，其中包含一个id为5的推文.
 // 因为用户1已经不再关注用户2.
 twitter.getNewsFeed(1);
- */
+*/
 
 type Twit struct {
 	TwitId int

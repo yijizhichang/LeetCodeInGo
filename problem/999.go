@@ -7,7 +7,7 @@ package problem
 
 返回车能够在一次移动中捕获到的卒的数量
 
- */
+*/
 
 func numRookCaptures(board [][]byte) int {
 	if len(board) < 1 {
@@ -17,8 +17,8 @@ func numRookCaptures(board [][]byte) int {
 	col := len(board[0])
 	targetR := 0
 	targetC := 0
-	for i:=0;i<row;i++ {
-		for j:=0;j<col;j++ {
+	for i := 0; i < row; i++ {
+		for j := 0; j < col; j++ {
 			if board[i][j] == 'R' {
 				targetR = i
 				targetC = j

@@ -35,16 +35,16 @@ func orangesRotting(grid [][]int) int {
 		for _, bad := range queue {
 			for _, this := range dir {
 				nextX := bad.x + this[0]
-				nextY := bad.y+ this[1]
+				nextY := bad.y + this[1]
 				if nextX >= 0 && nextX < row && nextY >= 0 && nextY < col && grid[nextX][nextY] == 1 {
 					grid[nextX][nextY] = 2
-					newQueue = append(newQueue, point{x:nextX, y:nextY})
-					freshNum --
+					newQueue = append(newQueue, point{x: nextX, y: nextY})
+					freshNum--
 				}
 			}
 		}
 		queue = newQueue
-		ret ++
+		ret++
 	}
 	if freshNum > 0 {
 		return -1

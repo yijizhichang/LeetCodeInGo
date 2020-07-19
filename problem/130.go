@@ -25,10 +25,10 @@ X O X X
 
 */
 
-func solve(board [][]byte)  {
-	for i := 0; i < len(board); i ++ {
-		for j := 0; j < len(board[i]); j ++ {
-			if i != 0 && j != 0 && i != len(board) - 1 && j != len(board[i]) - 1 {
+func solve(board [][]byte) {
+	for i := 0; i < len(board); i++ {
+		for j := 0; j < len(board[i]); j++ {
+			if i != 0 && j != 0 && i != len(board)-1 && j != len(board[i])-1 {
 				continue
 			}
 			if board[i][j] == 'O' {
@@ -36,8 +36,8 @@ func solve(board [][]byte)  {
 			}
 		}
 	}
-	for i := 0; i < len(board); i ++ {
-		for j := 0; j < len(board[i]); j ++ {
+	for i := 0; i < len(board); i++ {
+		for j := 0; j < len(board[i]); j++ {
 			if board[i][j] == 'O' {
 				board[i][j] = 'X'
 			} else if board[i][j] == 'M' {
@@ -56,26 +56,25 @@ func solve(board [][]byte)  {
 }
 
 func mark(board [][]byte, i int, j int) {
-	board[i][j] = 'M'//标记
+	board[i][j] = 'M' //标记
 
 	//向左
-	if j - 1 >= 0 && board[i][j - 1] == 'O' {
-		mark(board, i, j - 1)
+	if j-1 >= 0 && board[i][j-1] == 'O' {
+		mark(board, i, j-1)
 	}
 
 	//向右
-	if j + 1 < len(board[i])  && board[i][j + 1] == 'O' {
-		mark(board, i, j + 1)
+	if j+1 < len(board[i]) && board[i][j+1] == 'O' {
+		mark(board, i, j+1)
 	}
 
 	//向前
-	if i - 1 >= 0  && board[i - 1][j] == 'O' {
-		mark(board, i - 1, j)
+	if i-1 >= 0 && board[i-1][j] == 'O' {
+		mark(board, i-1, j)
 	}
 
 	//向后
-	if i + 1 < len(board)  && board[i + 1][j] == 'O' {
-		mark(board, i + 1, j)
+	if i+1 < len(board) && board[i+1][j] == 'O' {
+		mark(board, i+1, j)
 	}
 }
-

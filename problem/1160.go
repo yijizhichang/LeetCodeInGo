@@ -9,7 +9,7 @@ package problem
 
 返回词汇表 words 中你掌握的所有单词的 长度之和。
 
- 
+
 
 示例 1：
 
@@ -24,7 +24,7 @@ package problem
 解释：
 可以形成字符串 "hello" 和 "world"，所以答案是 5 + 5 = 10。
 
- */
+*/
 
 func countCharacters(words []string, chars string) int {
 	letter2Count := make(map[rune]int)
@@ -80,4 +80,4 @@ func countCharacters(words []string, chars string) int {
     }
     return ret
 }
- */
+*/

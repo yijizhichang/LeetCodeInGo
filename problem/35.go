@@ -34,8 +34,30 @@ func searchInsert(nums []int, target int) int {
 		} else if nums[i] == target {
 			return i
 		} else {
-			break;
+			break
 		}
 	}
 	return i
+}
+
+// 二分法
+func searchInsert2(nums []int, target int) int {
+	if len(nums) == 0 {
+		return 0
+	}
+	left := 0
+	right := len(nums) - 1
+	mid := -1
+	for left <= right && right >= 0 && left <= len(nums) {
+		mid = left + (right-left)/2 // 防止int溢出
+		if target < nums[mid] {
+			right = mid - 1
+		} else if target > nums[mid] {
+			left = mid + 1
+			mid = left
+		} else {
+			return mid
+		}
+	}
+	return mid
 }

@@ -7,7 +7,7 @@ import "math"
 
 相邻的结点 在这里指的是 下标 与 上一层结点下标 相同或者等于 上一层结点下标 + 1 的两个结点。
 
- 
+
 
 例如，给定三角形：
 
@@ -19,13 +19,12 @@ import "math"
 ]
 自顶向下的最小路径和为 11（即，2 + 3 + 5 + 1 = 11）。
 
- 
+
 
 说明：
 
 如果你可以只使用 O(n) 的额外空间（n 为三角形的总行数）来解决这个问题，那么你的算法会很加分。
- */
-
+*/
 
 /*
 ************题解***********
@@ -64,7 +63,7 @@ f[0][0]=c[0][0]
 
 即在三角形的顶部时，最小路径和就等于对应位置的元素值。这样一来，我们从 11 开始递增地枚举 ii，并在 [0, i][0,i] 的范围内递增地枚举 jj，就可以完成所有状态的计算。
 
- */
+*/
 
 func minimumTotal(triangle [][]int) int {
 	n := len(triangle)
@@ -73,20 +72,20 @@ func minimumTotal(triangle [][]int) int {
 	}
 	// 代表从最顶层到当前（i,j）点的最短距离
 	dp := make([][]int, n)
-	for i := 0; i< n; i++ {
+	for i := 0; i < n; i++ {
 		dp[i] = make([]int, n)
 	}
 	dp[0][0] = triangle[0][0]
-	for i := 1; i<n; i++ {
+	for i := 1; i < n; i++ {
 		dp[i][0] = dp[i-1][0] + triangle[i][0]
-		for j := 1; j<i; j++ {
-			dp[i][j] = min(dp[i-1][j],dp[i-1][j-1]) + triangle[i][j]
+		for j := 1; j < i; j++ {
+			dp[i][j] = min(dp[i-1][j], dp[i-1][j-1]) + triangle[i][j]
 		}
 		dp[i][i] = dp[i-1][i-1] + triangle[i][i]
 	}
 	res := math.MaxInt32
 	// 最后一排找最小的即可
-	for i := 0; i<n; i++ {
+	for i := 0; i < n; i++ {
 		res = min(res, dp[n-1][i])
 	}
 	return res

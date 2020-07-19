@@ -7,7 +7,7 @@ package problem
 
 如果我们的地图上只有陆地或者海洋，请返回 -1。
 
- 
+
 
 示例 1：
 
@@ -26,9 +26,9 @@ package problem
 解释：
 海洋区域 (2, 2) 和所有陆地区域之间的距离都达到最大，最大距离为 4。
 
- */
+*/
 func maxDistance(grid [][]int) int {
-	var queue []point       // all positions of lands
+	var queue []point // all positions of lands
 	for i, row := range grid {
 		for j, v := range row {
 			if v == 1 {
@@ -38,7 +38,7 @@ func maxDistance(grid [][]int) int {
 	}
 	rows := len(grid)
 	cols := len(grid[0])
-	if len(queue) == 0 || len(queue) == rows * cols {
+	if len(queue) == 0 || len(queue) == rows*cols {
 		return -1
 	}
 
@@ -50,7 +50,7 @@ func maxDistance(grid [][]int) int {
 			for _, dir := range dirs {
 				newX := p.x + dir[0]
 				newY := p.y + dir[1]
-				if newX >= 0 && newX < rows && newY >= 0 && newY < cols && grid[newX][newY]==0{
+				if newX >= 0 && newX < rows && newY >= 0 && newY < cols && grid[newX][newY] == 0 {
 					tempQueue = append(tempQueue, point{newX, newY})
 					grid[newX][newY] = 1
 				}
