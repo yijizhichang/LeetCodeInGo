@@ -20,7 +20,7 @@ func minDepth(root *TreeNode) int {
 	return min(minDepth(root.Left), minDepth(root.Right)) + 1
 }
 
-func min(a, b int) int {
+func Min(a, b int) int {
 	if a > b {
 		return b
 	}

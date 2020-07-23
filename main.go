@@ -14,7 +14,6 @@ func main() {
 	//fmt.Println(n)
 	//
 	//fmt.Println(kthSmallest(n, 3))
-
 }
 
 func kthSmallest(matrix [][]int, k int) int {
