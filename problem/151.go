@@ -17,7 +17,7 @@ package problem
 输入: "a good   example"
 输出: "example good a"
 解释: 如果两个单词间有多余的空格，将反转后单词间的空格减少到只含一个。
- 
+
 
 说明：
 
@@ -25,8 +25,7 @@ package problem
 输入字符串可以在前面或者后面包含多余的空格，但是反转后的字符不能包括。
 如果两个单词间有多余的空格，将反转后单词间的空格减少到只含一个。
 
- */
-
+*/
 
 func reverseWords(s string) string {
 	if s == "" {
@@ -61,4 +60,3 @@ func reverseWords(s string) string {
 
 	return string(res[:len(res)-1])
 }
-

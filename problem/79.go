@@ -49,7 +49,7 @@ func exist(board [][]byte, word string) bool {
 	return false
 }
 
-func backtrack(i, j int, board [][]byte, mark , directs [][]int, word string) bool {
+func backtrack(i, j int, board [][]byte, mark, directs [][]int, word string) bool {
 	if len(word) == 0 {
 		return true
 	}

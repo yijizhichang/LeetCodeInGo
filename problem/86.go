@@ -12,24 +12,24 @@ package problem
 
 */
 func partition(head *ListNode, x int) *ListNode {
-    if head == nil {
-        return head
-    }
-    
-    root := &ListNode{Next: head}
-    small := root
-    pre := root
-    curr := head
-    for curr != nil {
-        if curr.Val < x {
-            pre.Next = curr.Next
-            tmp := small.Next
-            small.Next = curr
-            curr.Next = tmp
-            small = small.Next
-        }
-        pre = curr
-        curr = curr.Next
-    }
-    return root.Next
+	if head == nil {
+		return head
+	}
+
+	root := &ListNode{Next: head}
+	small := root
+	pre := root
+	curr := head
+	for curr != nil {
+		if curr.Val < x {
+			pre.Next = curr.Next
+			tmp := small.Next
+			small.Next = curr
+			curr.Next = tmp
+			small = small.Next
+		}
+		pre = curr
+		curr = curr.Next
+	}
+	return root.Next
 }

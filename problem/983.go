@@ -12,7 +12,7 @@ package problem
 
 返回你想要完成在给定的列表 days 中列出的每一天的旅行所需要的最低消费。
 
- 
+
 
 示例 1：
 
@@ -33,7 +33,7 @@ package problem
 在第 1 天，你花了 costs[2] = $15 买了一张为期 30 天的通行证，它将在第 1, 2, ..., 30 天生效。
 在第 31 天，你花了 costs[0] = $2 买了一张为期 1 天的通行证，它将在第 31 天生效。
 你总共花了 $17，并完成了你计划的每一天旅行。
- 
+
 
 提示：
 
@@ -43,30 +43,30 @@ days 按顺序严格递增
 costs.length == 3
 1 <= costs[i] <= 1000
 
- */
+*/
 
 func mincostTickets(days []int, costs []int) int {
 	size := len(days)
-	dp := make([]int, days[size-1] + 1)
+	dp := make([]int, days[size-1]+1)
 	// -1 表示当天旅行， 0表示不旅行
 	for idx := range days {
 		dp[days[idx]] = -1
 	}
 
-	for i := 1; i <= days[size - 1]; i ++ {
+	for i := 1; i <= days[size-1]; i++ {
 		// 若不旅行
 		if dp[i] == 0 {
-			dp[i] = dp[i - 1]
+			dp[i] = dp[i-1]
 		} else {
 			// 有三种情况
 			dp[i] = min(
-				dp[max(0, i - 1)] + costs[0],
-				dp[max(0, i - 7)] + costs[1],
-				dp[max(0, i - 30)] + costs[2],
+				dp[max(0, i-1)]+costs[0],
+				dp[max(0, i-7)]+costs[1],
+				dp[max(0, i-30)]+costs[2],
 			)
 		}
 	}
-	return dp[len(dp) - 1]
+	return dp[len(dp)-1]
 }
 
 func min(a ...int) int {
@@ -85,5 +85,3 @@ func max(a, b int) int {
 	}
 	return b
 }
-
-

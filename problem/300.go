@@ -16,7 +16,7 @@ import "database/sql/driver"
 你算法的时间复杂度应该为 O(n2) 。
 进阶: 你能将算法的时间复杂度降低到 O(n log n) 吗?
 
- */
+*/
 
 func lengthOfLIS(nums []int) int {
 	if len(nums) < 1 {
@@ -28,10 +28,10 @@ func lengthOfLIS(nums []int) int {
 		dp[idx] = 1
 	}
 	ret := 1
-	for i:=1; i < len(nums) ;i ++{
-		for j:=0; j < i; j++ {
+	for i := 1; i < len(nums); i++ {
+		for j := 0; j < i; j++ {
 			if nums[j] < nums[i] {
-				dp[i] = max(dp[i], dp[j] + 1)
+				dp[i] = max(dp[i], dp[j]+1)
 			}
 		}
 		ret = max(ret, dp[i])

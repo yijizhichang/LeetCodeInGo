@@ -14,11 +14,11 @@ package problem
 输入: [2,2,1,1,1,2,2]
 输出: 2
 
- */
+*/
 
 func majorityElement(nums []int) int {
 	element2Count := make(map[int]int)
-	point := len(nums)/2
+	point := len(nums) / 2
 	for _, num := range nums {
 		if count, ok := element2Count[num]; ok {
 			element2Count[num] = count + 1

@@ -23,13 +23,12 @@ package problem
 0 <= A.length <= 40000
 0 <= A[i] < 40000
 
- */
-
+*/
 
 func minIncrementForUnique(A []int) int {
 	ele2count := make([]int, 80000)
-	for _,a := range A {
-		ele2count[a] ++
+	for _, a := range A {
+		ele2count[a]++
 	}
 	move := 0
 	for ele := range ele2count {

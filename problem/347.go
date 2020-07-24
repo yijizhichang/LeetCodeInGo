@@ -24,17 +24,17 @@ func topKFrequent(nums []int, k int) []int {
 	}
 	maxCount := 0
 	element2CountMap := make(map[int]int, 0)
-	for _,num := range nums {
+	for _, num := range nums {
 		element2CountMap[num]++
 		if element2CountMap[num] > maxCount {
 			maxCount = element2CountMap[num]
 		}
 	}
-	tmp := make([][]int,maxCount+1)
-	for k,v := range element2CountMap{
+	tmp := make([][]int, maxCount+1)
+	for k, v := range element2CountMap {
 		tmp[v] = append(tmp[v], k)
 	}
-	for i:=maxCount;i>=0;i--{
+	for i := maxCount; i >= 0; i-- {
 		if len(tmp[i]) == 0 {
 			continue
 		}

@@ -24,12 +24,12 @@ package problem
 
 注意: 给定的矩阵grid 的长度和宽度都不超过 50。
 
- */
+*/
 
 func maxAreaOfIsland(grid [][]int) int {
 	result := 0
-	for x:=0 ; x<len(grid); x++ {
-		for y := 0 ; y < len(grid[0]);y++{
+	for x := 0; x < len(grid); x++ {
+		for y := 0; y < len(grid[0]); y++ {
 			// 为陆地才遍历
 			if grid[x][y] == 1 {
 				thisRet := helper(grid, x, y)
@@ -43,10 +43,10 @@ func maxAreaOfIsland(grid [][]int) int {
 }
 
 func helper(grid [][]int, row, col int) int {
-	if row > len(grid) - 1 || row < 0{
+	if row > len(grid)-1 || row < 0 {
 		return 0
 	}
-	if col > len(grid[0]) - 1 || col < 0 {
+	if col > len(grid[0])-1 || col < 0 {
 		return 0
 	}
 	// left, right, up, down

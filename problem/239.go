@@ -19,7 +19,7 @@ import "container/list"
  1  3  -1 [-3  5  3] 6  7       5
  1  3  -1  -3 [5  3  6] 7       6
  1  3  -1  -3  5 [3  6  7]      7
- */
+*/
 
 func maxSlidingWindow(nums []int, k int) []int {
 	if k <= 1 {

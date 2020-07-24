@@ -7,16 +7,16 @@ package problem
 
 示例 1:
 
-输入: 
+输入:
 [[1,1,0],
  [1,1,0],
  [0,0,1]]
-输出: 2 
+输出: 2
 说明：已知学生0和学生1互为朋友，他们在一个朋友圈。
 第2个学生自己在一个朋友圈。所以返回2。
 示例 2:
 
-输入: 
+输入:
 [[1,1,0],
  [1,1,1],
  [0,1,1]]
@@ -30,22 +30,22 @@ N 在[1,200]的范围内。
 */
 
 func findCircleNum(M [][]int) int {
-    m := make(map[int]int, len(M))
-    count := 0
-    for i:=0;i<len(M);i++{
-        if _,ok := m[i];!ok{
-            dfs(M, i, m)
-            count++
-        }
-    }
-    return count
+	m := make(map[int]int, len(M))
+	count := 0
+	for i := 0; i < len(M); i++ {
+		if _, ok := m[i]; !ok {
+			dfs(M, i, m)
+			count++
+		}
+	}
+	return count
 }
 
-func dfs(M [][]int,i int,m map[int]int) {
-    m[i] = 1
-    for j:=0;j<len(M);j++{
-        if _,ok := m[j]; !ok && M[i][j]==1{
-            dfs(M, j, m)
-        }
-    }
+func dfs(M [][]int, i int, m map[int]int) {
+	m[i] = 1
+	for j := 0; j < len(M); j++ {
+		if _, ok := m[j]; !ok && M[i][j] == 1 {
+			dfs(M, j, m)
+		}
+	}
 }

@@ -21,7 +21,7 @@ import "container/heap"
 
 0 <= k <= arr.length <= 10000
 0 <= arr[i] <= 10000
- */
+*/
 
 func getLeastNumbers(arr []int, k int) []int {
 	if k <= 0 {
@@ -32,11 +32,11 @@ func getLeastNumbers(arr []int, k int) []int {
 	}
 	ret := make([]int, k-1)
 	ret = arr[:k]
-	for i:=k; i < len(arr) ; i++{
+	for i := k; i < len(arr); i++ {
 		max := 0
 		this := arr[i]
 		// 每次找到k个里最大的
-		for j:=1; j < len(ret); j++ {
+		for j := 1; j < len(ret); j++ {
 			if ret[j] > ret[max] {
 				max = j
 			}
@@ -48,7 +48,6 @@ func getLeastNumbers(arr []int, k int) []int {
 	}
 	return ret
 }
-
 
 func getLeastNumbers(arr []int, k int) []int {
 	if k <= 0 {

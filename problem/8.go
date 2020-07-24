@@ -18,7 +18,7 @@ import "math"
 
 本题中的空白字符只包括空格字符 ' ' 。
 假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 [−231,  231 − 1]。如果数值超过这个范围，请返回  INT_MAX (231 − 1) 或 INT_MIN (−231) 。
- 
+
 
 示例 1:
 
@@ -47,7 +47,7 @@ import "math"
 输出: -2147483648
 解释: 数字 "-91283472332" 超过 32 位有符号整数范围。
      因此返回 INT_MIN (−231) 。
- */
+*/
 
 func myAtoi(str string) int {
 	res, flag := 0, 1
@@ -94,4 +94,3 @@ func myAtoi(str string) int {
 	}
 	return res * flag
 }
-

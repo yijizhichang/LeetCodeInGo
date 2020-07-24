@@ -18,7 +18,7 @@ package problem
 
 输入: x = 2, y = 6, z = 5
 输出: False
- */
+*/
 
 // z是x,y最大公约数的倍数，就代表能组成
 //func canMeasureWater(x int, y int, z int) bool {
@@ -45,7 +45,7 @@ func canMeasureWater(x int, y int, z int) bool {
 	}
 
 	if x == 0 || y == 0 {
-		return z == (x+y)
+		return z == (x + y)
 	}
 	if x > y {
 		x, y = y, x

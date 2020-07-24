@@ -3,7 +3,7 @@ package problem
 /*
 给你一个整数数组 nums，请你将该数组升序排列。
 
- 
+
 
 示例 1：
 
@@ -13,25 +13,25 @@ package problem
 
 输入：nums = [5,1,1,2,0,0]
 输出：[0,0,1,1,2,5]
- 
+
 
 提示：
 
 1 <= nums.length <= 50000
 -50000 <= nums[i] <= 50000
 
- */
+*/
 
 func sortArray(nums []int) []int {
-	return quickSort(nums, 0, len(nums) - 1)
+	return quickSort(nums, 0, len(nums)-1)
 }
 
 // ----------快排--------start-------
 func quickSort(arr []int, left, right int) []int {
 	if left < right {
 		partitionIndex := partition(arr, left, right)
-		quickSort(arr, left, partitionIndex - 1)
-		quickSort(arr, partitionIndex + 1, right)
+		quickSort(arr, left, partitionIndex-1)
+		quickSort(arr, partitionIndex+1, right)
 	}
 	return arr
 }
@@ -46,8 +46,8 @@ func partition(arr []int, left, right int) int {
 			index++
 		}
 	}
-	arr[pivot], arr[index - 1] = arr[index - 1], arr[pivot]
+	arr[pivot], arr[index-1] = arr[index-1], arr[pivot]
 	return index - 1
 }
-// ----------快排--------end-------
 
+// ----------快排--------end-------

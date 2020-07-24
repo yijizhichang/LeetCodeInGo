@@ -9,7 +9,7 @@ package problem
 组内所有的牌上都写着相同的整数。
 仅当你可选的 X >= 2 时返回 true。
 
- 
+
 
 示例 1：
 
@@ -37,7 +37,7 @@ package problem
 输出：true
 解释：可行的分组是 [1,1]，[2,2]，[2,2]
 
- */
+*/
 
 func hasGroupsSizeX(deck []int) bool {
 	if len(deck) < 2 {
@@ -45,18 +45,18 @@ func hasGroupsSizeX(deck []int) bool {
 	}
 	num2Count := make(map[int]int)
 	for _, cur := range deck {
-		if _, ok := num2Count[cur];ok {
-			num2Count[cur] ++
+		if _, ok := num2Count[cur]; ok {
+			num2Count[cur]++
 		} else {
 			num2Count[cur] = 1
 		}
 	}
 	final := 0
 	flag := false
-	for _,count := range num2Count {
+	for _, count := range num2Count {
 		if flag {
 			greater := gcd(final, count)
-			if greater < 2{
+			if greater < 2 {
 				return false
 			}
 		}
@@ -67,10 +67,9 @@ func hasGroupsSizeX(deck []int) bool {
 }
 
 // 最大公约数
-func gcd(a,b int) int {
+func gcd(a, b int) int {
 	if b == 0 {
 		return a
 	}
-	return gcd(b, a % b)
+	return gcd(b, a%b)
 }
-

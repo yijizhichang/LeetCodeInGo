@@ -18,25 +18,25 @@ package problem
 首先，迭代计算出0、1 和 2 元素的个数，然后按照0、1、2的排序，重写当前数组。
 你能想出一个仅使用常数空间的一趟扫描算法吗？
 */
-func sortColors(nums []int)  {
-    if len(nums) == 0 {
-        return
-    }
-    p0 := 0
-    p2 := len(nums) - 1
-    curr := 0
-    for curr <= p2 {
-        switch nums[curr] {
-        case 0:
-            nums[p0],nums[curr] = nums[curr],nums[p0]
-            p0++
-            curr++
-        case 1:
-            curr++
-        case 2:
-            nums[p2],nums[curr] = nums[curr],nums[p2]
-            p2--
-        }
-        
-    }
+func sortColors(nums []int) {
+	if len(nums) == 0 {
+		return
+	}
+	p0 := 0
+	p2 := len(nums) - 1
+	curr := 0
+	for curr <= p2 {
+		switch nums[curr] {
+		case 0:
+			nums[p0], nums[curr] = nums[curr], nums[p0]
+			p0++
+			curr++
+		case 1:
+			curr++
+		case 2:
+			nums[p2], nums[curr] = nums[curr], nums[p2]
+			p2--
+		}
+
+	}
 }

@@ -39,7 +39,7 @@ import (
   / \
  1   2
 
- */
+*/
 
 /**
  * Definition for a binary tree node.
@@ -55,22 +55,22 @@ import (
 2 异常情况1：叶子节点缺少 如果主树： 1是根节点 2是左叶子节点 而子树是1是根节点 2是右叶子节点 他们两都是遍历结果都是12 但是他们两是不包含的 所以需要处理空节点问题，因此我这边是对空节点处理成一个字符 注意左右节点使用不同的符号标记
 2 异常情况2 如果主树 12是根节点 而子树 2是根节点 他们两的字符串分别是12 和2 但是他们两也不是包含关系的 需要在特殊处理一下节点值的问题，我这边使用的一个括号将值分割开
 
- */
-func isSubtree(s *TreeNode, t *TreeNode) bool{
+*/
+func isSubtree(s *TreeNode, t *TreeNode) bool {
 	var s1 strings.Builder
-	preOrder(s,&s1,"")
+	preOrder(s, &s1, "")
 	var s2 strings.Builder
-	preOrder(t,&s2,"")
-	return strings.Contains(s1.String(),s2.String())
+	preOrder(t, &s2, "")
+	return strings.Contains(s1.String(), s2.String())
 }
-func preOrder(root *TreeNode, res *strings.Builder,tag string){
-	if root ==nil{
+func preOrder(root *TreeNode, res *strings.Builder, tag string) {
+	if root == nil {
 		res.WriteString(tag)
 		return
 	}
-	res.WriteString(fmt.Sprintf("(%d)",root.Val))
-	preOrder(root.Left,res,"L")
-	preOrder(root.Right,res,"R")
+	res.WriteString(fmt.Sprintf("(%d)", root.Val))
+	preOrder(root.Left, res, "L")
+	preOrder(root.Right, res, "R")
 }
 
 // dfs暴力解开
@@ -98,4 +98,4 @@ func check(a, b *TreeNode) bool {
     return false
 }
 
- */
+*/

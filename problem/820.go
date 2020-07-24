@@ -9,14 +9,14 @@ package problem
 
 那么成功对给定单词列表进行编码的最小字符串长度是多少呢？
 
- 
+
 
 示例：
 
 输入: words = ["time", "me", "bell"]
 输出: 10
 说明: S = "time#bell#" ， indexes = [0, 2, 5] 。
- 
+
 
 提示：
 
@@ -24,7 +24,7 @@ package problem
 1 <= words[i].length <= 7
 每个单词都是小写字母 。
 
- */
+*/
 
 func minimumLengthEncoding(words []string) int {
 	out := 0
@@ -44,5 +44,3 @@ func minimumLengthEncoding(words []string) int {
 	}
 	return out
 }
-
-
