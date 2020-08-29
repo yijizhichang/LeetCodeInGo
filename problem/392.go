@@ -1,5 +1,7 @@
 package problem
 
+import "strings"
+
 //给定字符串 s 和 t ，判断 s 是否为 t 的子序列。
 //
 //你可以认为 s 和 t 中仅包含英文小写字母。字符串 t 可能会很长（长度 ~= 500,000），而 s 是个短字符串（长度 <=100）。
@@ -32,4 +34,20 @@ func isSubsequence(s string, t string) bool {
 		}
 	}
 	return flag
+}
+
+func isSubsequence(s string, t string) bool {
+	if s == "" {
+		return true
+	}
+	i := 0
+	j := 0
+	for i < len(s) && j < len(t) {
+		if s[i] == t[j] {
+			i++
+		}
+		// 以较长串为主的移动
+		j++
+	}
+	return i == len(s)
 }
