@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
-	"strings"
 )
 
 func main() {
@@ -16,43 +14,12 @@ func main() {
 	//fmt.Println(n)
 	//
 	//fmt.Println(kthSmallest(n, 3))
-	t := TreeNode{
-		Val:   1,
-		Left:  nil,
-		Right: nil,
-	}
-	fmt.Println(binaryTreePaths(&t))
 }
 
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
 	Right *TreeNode
-}
-
-var res []string
-
-func binaryTreePaths(root *TreeNode) []string {
-	if root == nil {
-		return nil
-	}
-	tmp := make([]string, 0)
-	helper(root, tmp)
-	return res
-}
-
-func helper(root *TreeNode, now []string) {
-	if root.Left != nil {
-		helper(root.Left, append(now, strconv.Itoa(root.Val)))
-	}
-	if root.Right != nil {
-		helper(root.Right, append(now, strconv.Itoa(root.Val)))
-	}
-	now = append(now, strconv.Itoa(root.Val))
-	if root.Left == nil && root.Right == nil {
-		res = append(res, strings.Join(now, "->"))
-		return
-	}
 }
 
 func kthSmallest(matrix [][]int, k int) int {
