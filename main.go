@@ -16,6 +16,12 @@ func main() {
 	//fmt.Println(kthSmallest(n, 3))
 }
 
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
 func kthSmallest(matrix [][]int, k int) int {
 	n := len(matrix)
 	left, right := matrix[0][0], matrix[n-1][n-1]
