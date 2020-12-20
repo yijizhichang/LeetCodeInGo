@@ -6,20 +6,47 @@ import (
 
 func main() {
 	fmt.Println("test here!")
-	//m := []int{1,2,3}
-	//n := make([][]int, 0)
-	//n = append(n, m)
-	//n = append(n, m)
-	//n = append(n, m)
-	//fmt.Println(n)
-	//
-	//fmt.Println(kthSmallest(n, 3))
+	fmt.Println(removeDuplicateLetters("cbacdcbc"))
 }
 
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
 	Right *TreeNode
+}
+
+func removeDuplicateLetters(s string) string {
+	shengyu := make([]int32, 26)
+	stack := make([]int32, 0)
+	// 是否在栈中，存在为true
+	var exist [26]bool
+	for _, this := range s {
+		shengyu[this-'a']++
+	}
+	for _, this := range s {
+		// 如果栈中已有，则不用加
+		if exist[this-'a'] {
+			shengyu[this-'a']--
+			continue
+		}
+		for len(stack) > 0 && stack[len(stack)-1] > this && shengyu[stack[len(stack)-1]-'a'] > 0 {
+			// 标记为栈中不含栈顶元素
+			exist[stack[len(stack)-1]-'a'] = false
+			// 删除栈顶元素
+			stack = stack[:len(stack)-1]
+		}
+		// 添加新字符
+		stack = append(stack, this)
+		// 减少该字符出现次数
+		shengyu[this-'a']--
+		// 标记栈中有该字符
+		exist[this-'a'] = true
+	}
+	ret := ""
+	for _, this := range stack {
+		ret += string(this)
+	}
+	return ret
 }
 
 func kthSmallest(matrix [][]int, k int) int {
