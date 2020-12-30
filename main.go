@@ -6,7 +6,7 @@ import (
 
 func main() {
 	fmt.Println("test here!")
-	fmt.Println(removeDuplicateLetters("cbacdcbc"))
+	isIsomorphic("agg", "edd")
 }
 
 type TreeNode struct {
@@ -15,38 +15,24 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func removeDuplicateLetters(s string) string {
-	shengyu := make([]int32, 26)
-	stack := make([]int32, 0)
-	// 是否在栈中，存在为true
-	var exist [26]bool
-	for _, this := range s {
-		shengyu[this-'a']++
+func isIsomorphic(s string, t string) bool {
+	if len(s) != len(t) {
+		return false
 	}
-	for _, this := range s {
-		// 如果栈中已有，则不用加
-		if exist[this-'a'] {
-			shengyu[this-'a']--
-			continue
+	inner := func(s string, t string) bool {
+		s2t := make(map[uint8]uint8)
+		for i := 0; i < len(s); i++ {
+			if after, ok := s2t[s[i]]; ok {
+				if after != t[i] {
+					return false
+				}
+			} else {
+				s2t[s[i]] = t[i]
+			}
 		}
-		for len(stack) > 0 && stack[len(stack)-1] > this && shengyu[stack[len(stack)-1]-'a'] > 0 {
-			// 标记为栈中不含栈顶元素
-			exist[stack[len(stack)-1]-'a'] = false
-			// 删除栈顶元素
-			stack = stack[:len(stack)-1]
-		}
-		// 添加新字符
-		stack = append(stack, this)
-		// 减少该字符出现次数
-		shengyu[this-'a']--
-		// 标记栈中有该字符
-		exist[this-'a'] = true
+		return true
 	}
-	ret := ""
-	for _, this := range stack {
-		ret += string(this)
-	}
-	return ret
+	return inner(s, t) && inner(t, s)
 }
 
 func kthSmallest(matrix [][]int, k int) int {
