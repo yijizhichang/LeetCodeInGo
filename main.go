@@ -6,33 +6,13 @@ import (
 
 func main() {
 	fmt.Println("test here!")
-	isIsomorphic("agg", "edd")
+
 }
 
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
 	Right *TreeNode
-}
-
-func isIsomorphic(s string, t string) bool {
-	if len(s) != len(t) {
-		return false
-	}
-	inner := func(s string, t string) bool {
-		s2t := make(map[uint8]uint8)
-		for i := 0; i < len(s); i++ {
-			if after, ok := s2t[s[i]]; ok {
-				if after != t[i] {
-					return false
-				}
-			} else {
-				s2t[s[i]] = t[i]
-			}
-		}
-		return true
-	}
-	return inner(s, t) && inner(t, s)
 }
 
 func kthSmallest(matrix [][]int, k int) int {
