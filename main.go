@@ -6,7 +6,7 @@ import (
 
 func main() {
 	fmt.Println("test here!")
-
+	fmt.Println(threeSum([]int{-1, 0, 1, 2, -1, -4}))
 }
 
 type TreeNode struct {
