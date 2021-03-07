@@ -15,6 +15,7 @@ func Partition(tar []int, low, high int) int {
 	pivot := tar[left]
 	// 终止条件是左右指向同一个值
 	for left != right {
+		// 一定先找右边的
 		// 右边开始，找到第一个小于哨兵值的点
 		for left < right && pivot <= tar[right] {
 			right--
