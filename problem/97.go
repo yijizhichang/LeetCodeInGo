@@ -29,7 +29,6 @@ c 4| 0 0 1 1 1 1
 c 5| 0 0 0 1 0 1
 */
 
-
 func main() {
 	s1 := "aabcc"
 	s2 := "dbbca"
@@ -38,6 +37,7 @@ func main() {
 	isInterleave2(s1, s2, s3)
 
 }
+
 //动态规划
 func isInterleave(s1 string, s2 string, s3 string) bool {
 	len1 := len(s1)
@@ -81,21 +81,21 @@ func isInterleave2(s1 string, s2 string, s3 string) bool {
 	}
 	if s1 == "" && s2 == "" {
 		return true
-	} else if (s1 == "") {
+	} else if s1 == "" {
 		if s2[0] == s3[0] {
 			return isInterleave(s1, s2[1:], s3[1:])
 		}
-	} else if (s2 == "") {
+	} else if s2 == "" {
 		if s1[0] == s3[0] {
 			return isInterleave(s1[1:], s2, s3[1:])
 		}
 	}
-	if (s1 != "" && s1[0] == s3[0] && s2[0] != s3[0]) {
+	if s1 != "" && s1[0] == s3[0] && s2[0] != s3[0] {
 		return isInterleave(s1[1:], s2, s3[1:])
-	} else if (s2 != "" && s2[0] == s3[0] && s1[0] != s3[0]) {
+	} else if s2 != "" && s2[0] == s3[0] && s1[0] != s3[0] {
 
 		return isInterleave(s1, s2[1:], s3[1:])
-	} else if (s1 != "" && s1[0] == s3[0] && s2 != "" && s2[0] == s3[0]) {
+	} else if s1 != "" && s1[0] == s3[0] && s2 != "" && s2[0] == s3[0] {
 
 		isRel := isInterleave(s1[1:], s2, s3[1:])
 		isRel2 := isInterleave(s1, s2[1:], s3[1:])

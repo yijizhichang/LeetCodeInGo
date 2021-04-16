@@ -1,4 +1,5 @@
 package problem
+
 /*
 我们给出了一个由一些独特的单词组成的单词列表，每个单词都是 6 个字母长，并且这个列表中的一个单词将被选作秘密。
 你可以调用 master.guess(word) 来猜单词。你所猜的单词应当是存在于原列表并且由 6 个小写字母组成的类型字符串。
@@ -10,7 +11,7 @@ package problem
 示例:
 输入: secret = "acckzz", wordlist = ["acckzz","ccbazz","eiowzz","abcczz"]
 
- */
+*/
 func cmp(sa, sb string) int {
 	c := 0
 	for i := 0; i < 6; i++ {

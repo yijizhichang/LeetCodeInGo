@@ -55,4 +55,3 @@ func Contains(word string, root *node, count int) bool {
 	}
 	return false
 }
-

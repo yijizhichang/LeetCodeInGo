@@ -92,7 +92,7 @@ func reorganizeString(S string) string {
 	m := make(map[string]int, 26)
 
 	for i := 0; i < len(S); i++ {
-		m[string(S[i])] ++
+		m[string(S[i])]++
 	}
 
 	maxChar, _ := getMaxNumChar(m)
@@ -106,8 +106,8 @@ func reorganizeString(S string) string {
 		maxFirstChar, maxSecondChar := getMaxNumChar(m)
 		newStr += maxFirstChar
 		newStr += maxSecondChar
-		m[maxFirstChar] --
-		m[maxSecondChar] --
+		m[maxFirstChar]--
+		m[maxSecondChar]--
 	}
 
 	return newStr

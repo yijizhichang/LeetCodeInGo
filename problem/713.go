@@ -1,7 +1,7 @@
 package problem
 
 func main() {
-	arr := []int{10,5,2,6}
+	arr := []int{10, 5, 2, 6}
 	numSubarrayProductLessThanK(arr, 100)
 }
 
@@ -26,16 +26,16 @@ func main() {
 */
 
 func numSubarrayProductLessThanK(nums []int, k int) int {
-	if (k <= 0 ) {
+	if k <= 0 {
 		return 0
 	}
-	var count = 0  //小于k的个数
-	var left = 0 //开始位置
-	var right = 0 //结束位置
-	var multiplier = 1 //临时乘积
+	var count = 0         //小于k的个数
+	var left = 0          //开始位置
+	var right = 0         //结束位置
+	var multiplier = 1    //临时乘积
 	var lenth = len(nums) //数组长度
 	//从头开始循环遍历数组
-	for left = 0; left < lenth; left ++ {
+	for left = 0; left < lenth; left++ {
 
 		for right < lenth && multiplier*nums[right] < k {
 

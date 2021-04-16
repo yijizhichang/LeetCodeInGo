@@ -32,7 +32,7 @@ input: 5
 6. 1+1+2+1
 7. 1+2+1+1
 8. 2+1+1+1
- */
+*/
 
 // 太多重复的计算
 func climbStairs(n int) int {
@@ -50,29 +50,22 @@ func climbStairs(n int) int {
 
 // 动态规划
 func climbStairs(n int) int {
-	if n < 1 {
-		return 0
-	}
-	if n == 1 {
-		return 1
-	}
-	if n == 2 {
-		return 2
+	if n <= 2 {
+		return n
 	}
 	dp := make([]int, n+1)
 	dp[0] = 0
 	dp[1] = 1
 	dp[2] = 2
-	for i:=3;i<=n;i++ {
+	for i := 3; i < n; i++ {
 		dp[i] = dp[i-1] + dp[i-2]
 	}
 	return dp[n]
 }
 
-//func helper(n int, dp []int) int {
+//func depth(n int, dp []int) int {
 //	if dp[n] != 0 {
 //		return dp[n]
 //	}
-//	return helper(n-1,dp) + helper(n-2,dp)
+//	return depth(n-1,dp) + depth(n-2,dp)
 //}
-
