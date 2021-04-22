@@ -1,4 +1,4 @@
-package string
+package dp
 
 /*
 实现 strStr() 函数。
