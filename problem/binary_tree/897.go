@@ -23,11 +23,7 @@ func increasingBST(root *TreeNode) *TreeNode {
 	if root == nil {
 		return nil
 	}
-	ret := &TreeNode{
-		Val:   0,
-		Left:  nil,
-		Right: nil,
-	}
+	ret := &TreeNode{}
 	head := &TreeNode{}
 	head = ret
 
@@ -37,8 +33,9 @@ func increasingBST(root *TreeNode) *TreeNode {
 			return
 		}
 		helper(root.Left)
-		ret.Right = &TreeNode{Val: root.Val}
+		ret.Right = root
 		ret = ret.Right
+		ret.Left = nil
 		helper(root.Right)
 	}
 	helper(root)
