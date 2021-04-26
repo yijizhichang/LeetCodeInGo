@@ -1,5 +1,7 @@
 package problem
 
+import "strings"
+
 /*
 给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。
 
@@ -21,24 +23,20 @@ package problem
 */
 
 func lengthOfLongestSubstring(s string) int {
-	n := len(s)
-	if n < 2 {
-		return n
-	}
-	max := 0
-	for i := 0; i < n; i++ {
-		mp := make(map[uint8]int)
-		mp[s[i]] = 1
-		for j := i + 1; j < n; j++ {
-			if _, ok := mp[s[j]]; !ok {
-				mp[s[j]] = 1
-			} else {
-				break
+	start, end := 0, 0
+	for i := 0; i < len(s); i++ {
+		index := strings.Index(s[start:i], string(s[i]))
+		if index == -1 {
+			// 没有
+			// 如果没有超出字符串总长，则尾结点后移一位
+			if end < i+1 {
+				end = i + 1
 			}
-		}
-		if max < len(mp) {
-			max = len(mp)
+		} else {
+			// 若出现重复字符，则两个游标都增大index+1位（窗口大小不变，start游标滑动到重复位置后一位）
+			start += index + 1
+			end += index + 1
 		}
 	}
-	return max
+	return end - start
 }
