@@ -28,6 +28,8 @@ import "math"
 输出：0
 */
 
+
+// -231 <= x <= 231 - 1 
 func reverse(x int) int {
 	y := 0
 	for x != 0 {
