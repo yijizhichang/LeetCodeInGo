@@ -1,45 +1,71 @@
 package xor
 
+import "sort"
+
 /*
-给你一个整数数组 perm ，它是前 n 个正整数的排列，且 n 是个 奇数 。
+给你一个二维矩阵 matrix 和一个整数 k ，矩阵大小为 m x n 由非负整数组成。
 
-它被加密成另一个长度为 n - 1 的整数数组 encoded ，满足 encoded[i] = perm[i] XOR perm[i + 1] 。
-比方说，如果 perm = [1,3,2] ，那么 encoded = [2,1] 。
+矩阵中坐标 (a, b) 的 值 可由对所有满足 0 <= i <= a < m 且 0 <= j <= b < n 的元素 matrix[i][j]（下标从 0 开始计数）执行异或运算得到。
 
-给你 encoded 数组，请你返回原始数组 perm 。题目保证答案存在且唯一。
+请你找出 matrix 的所有坐标中第 k 大的值（k 的值从 1 开始计数）。
 
+ex1:
+输入：matrix = [[5,2],[1,6]], k = 1
+输出：7
+解释：坐标 (0,1) 的值是 5 XOR 2 = 7 ，为最大的值。
+ */
 
-
-示例 1：
-
-输入：encoded = [3,1]
-输出：[1,2,3]
-解释：如果 perm = [1,2,3] ，那么 encoded = [1 XOR 2,2 XOR 3] = [3,1]
-示例 2：
-
-输入：encoded = [6,5,4,6]
-输出：[2,4,1,5,3]
-
-*/
-
-func decode(encoded []int) []int {
-	// 由于prem是前n个正整数的序列，所以prem所有元素的异或结果是可以得出的
-	n := len(encoded)
-	total := 0
-	for i := 1; i <= n+1; i++ {
-		total ^= i
+func kthLargestValue(matrix [][]int, k int) int {
+	row, col := len(matrix), len(matrix[0])
+	pre := make([][]int, row+1)
+	pre[0] = make([]int, col+1)
+	result := make([]int, 0, row*col)
+	for i:=0; i<row; i++ {
+		pre[i+1] = make([]int, col+1)
+		for j:=0; j<col; j++ {
+			pre[i+1][j+1] = pre[i][j]^pre[i+1][j]^pre[i][j+1]^matrix[i][j]
+			result = append(result, pre[i+1][j+1])
+		}
 	}
-	// 推公式可得，encoded中奇数异或即是prem中除了第一个元素之外所有的元素异或结果
-	oddSum := 0
-	for i := 1; i < n; i += 2 {
-		oddSum ^= encoded[i]
-	}
-	perm := make([]int, n+1)
-	// 现在可得首个元素
-	perm[0] = total ^ oddSum
-	for i, v := range encoded {
-		perm[i+1] = perm[i] ^ v
-	}
-	return perm
+	sort.Slice(result, func(i, j int) bool {
+		return result[i]<result[j]
+	})
+	//rand.Shuffle(len(result), func(i, j int) { result[i], result[j] = result[j], result[i] })
+	//targetPos := len(result) - k
+	//left, right := 0, len(result)-1
+	//for left <= right {
+	//	pos := Partition(result, left, right)
+	//	if pos < targetPos {
+	//		left = pos+1
+	//	} else if pos > targetPos {
+	//		right = pos-1
+	//	} else {
+	//		return result[pos]
+	//	}
+	//}
+	return result[len(result)-k]
+}
 
+func Partition(tar []int, low, high int) int {
+	left, right := low, high
+	pivot := tar[left]
+	// 终止条件是左右指向同一个值
+	for left != right {
+		// 一定先找右边的
+		// 右边开始，找到第一个小于哨兵值的点
+		for left < right && pivot <= tar[right] {
+			right--
+		}
+		// 从左边开始，找到第一个大于哨兵值的点
+		for left < right && pivot >= tar[left] {
+			left++
+		}
+		if left < right {
+			// 交换
+			tar[left], tar[right] = tar[right], tar[left]
+		}
+	}
+	// 把哨兵放到最终满足左边都小于他，右边都大于他的点
+	tar[low], tar[left] = tar[left], tar[low]
+	return left
 }
