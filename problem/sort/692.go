@@ -44,12 +44,16 @@ func topKFrequent(words []string, k int) []string {
 }
 
 // 优先队列
+
 type pair struct {
 	w string
 	c int
 }
+
+// 继承自heap的队列
 type hp []pair
 func (h hp) Len() int            { return len(h) }
+// Less 替换规则主要实现less
 func (h hp) Less(i, j int) bool  { a, b := h[i], h[j]; return a.c < b.c || a.c == b.c && a.w > b.w }
 func (h hp) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
 func (h *hp) Push(v interface{}) { *h = append(*h, v.(pair)) }
