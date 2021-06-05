@@ -1,4 +1,4 @@
-package array_list
+package prefix
 
 /*
 给你一个整数数组 nums 和一个整数 k ，编写一个函数来判断该数组是否含有同时满足下述条件的连续子数组：
@@ -30,5 +30,22 @@ package array_list
 */
 
 func checkSubarraySum(nums []int, k int) bool {
-	now :=
+	m := len(nums)
+	if m < 2 {
+		return false
+	}
+	mp := map[int]int{0: -1}
+	remainder := 0
+	for i, num := range nums {
+		remainder = (remainder + num) % k
+		if prevIndex, has := mp[remainder]; has {
+			if i-prevIndex >= 2 {
+				return true
+			}
+		} else {
+			mp[remainder] = i
+		}
+	}
+	return false
 }
+
