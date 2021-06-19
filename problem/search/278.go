@@ -1,4 +1,4 @@
-package binary_tree
+package search
 
 /*
 你是产品经理，目前正在带领一个团队开发新的产品。不幸的是，你的产品的最新版本没有通过质量检测。由于每个版本都是基于之前的版本开发的，所以错误的版本之后的所有版本都是错的。
@@ -15,20 +15,20 @@ package binary_tree
 调用 isBadVersion(5) -> true
 调用 isBadVersion(4) -> true
 
-所以，4 是第一个错误的版本。 
+所以，4 是第一个错误的版本。
 
- */
+*/
 
 func isBadVersion(version int) bool
 
 func firstBadVersion(n int) int {
 	left, right := 1, n
-	for left < right{
+	for left < right {
 		mid := (right-left)/2 + left
-		if isBadVersion(mid){
+		if isBadVersion(mid) {
 			right = mid
 		} else {
-			left = mid+1
+			left = mid + 1
 		}
 	}
 	return left

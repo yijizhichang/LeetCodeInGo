@@ -1,4 +1,4 @@
-package binary_tree
+package search
 
 import "sort"
 
