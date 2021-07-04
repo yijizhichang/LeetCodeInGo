@@ -15,20 +15,20 @@ package binary_tree
 调用 isBadVersion(5) -> true
 调用 isBadVersion(4) -> true
 
-所以，4 是第一个错误的版本。 
+所以，4 是第一个错误的版本。
 
- */
+*/
 
 func isBadVersion(version int) bool
 
 func firstBadVersion(n int) int {
 	left, right := 1, n
-	for left < right{
+	for left < right {
 		mid := (right-left)/2 + left
-		if isBadVersion(mid){
+		if isBadVersion(mid) {
 			right = mid
 		} else {
-			left = mid+1
+			left = mid + 1
 		}
 	}
 	return left
