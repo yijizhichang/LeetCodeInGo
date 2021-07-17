@@ -1,5 +1,7 @@
 package array_list
 
+import "math"
+
 /*
 集合 s 包含从 1 到 n 的整数。不幸的是，因为数据错误，导致集合里面某一个数字复制了成了集合里面的另外一个数字的值，导致集合 丢失了一个数字 并且 有一个数字重复 。
 
@@ -20,6 +22,7 @@ package array_list
 
  */
 
+// hash o(n) time, o(n) space
 func findErrorNums(nums []int) []int {
 	if len(nums) < 2 {
 		return nil
@@ -40,4 +43,26 @@ func findErrorNums(nums []int) []int {
 		}
 	}
 	return ret
+}
+
+// 原地标记
+func findErrorNums(nums []int) []int {
+	if len(nums) < 2 {
+		return nil
+	}
+	miss, dup := -1, -1
+	for _, num := range nums {
+		i := int(math.Abs(float64(num))) - 1
+		if nums[i] < 0 {
+			dup = i+1
+		} else {
+			nums[i] = -nums[i]
+		}
+	}
+	for idx, num := range nums {
+		if num > 0 {
+			miss = idx+1
+		}
+	}
+	return []int{dup, miss}
 }
