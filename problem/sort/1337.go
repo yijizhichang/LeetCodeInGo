@@ -41,10 +41,10 @@ func kWeakestRows(mat [][]int, k int) []int {
 			}
 			point++
 		}
-		points[idx] = Point{point, idx}
+		points[idx] = Point{point*10*k + idx, idx}
 	}
 	sort.Slice(points, func(i, j int) bool {
-		return points[i].point < points[j].point || points[i].row < points[j].row
+		return points[i].point < points[j].point
 	})
 	ret := make([]int, k)
 	for i := 0; i < k; i++ {
